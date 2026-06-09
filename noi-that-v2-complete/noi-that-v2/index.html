@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IndigoSpace — Nội Thất Cao Cấp</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/header.css"/>
+  <link rel="stylesheet" href="css/home.css"/>
+  <link rel="stylesheet" href="css/products.css"/>
+</head>
+<body>
+
+<!-- ===== PAGE LOADER ===== -->
+<div id="page-loader" class="page-loader">
+  <div class="loader-ring"></div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-top">
+    🚚 Miễn phí vận chuyển cho đơn hàng từ 5 triệu đồng &nbsp;|&nbsp; 📞 Hotline: 1800-6868 (miễn phí)
+  </div>
+  <div class="header-main">
+    <!-- Logo -->
+    <a href="index.html" class="site-logo">
+      <div class="logo-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-brand">IndigoSpace</span>
+        <span class="logo-tagline">Interior Design</span>
+      </div>
+    </a>
+
+    <!-- Search -->
+    <div class="header-search">
+      <div class="search-input-wrap">
+        <input id="search-input" class="search-input" type="text"
+               placeholder="Tìm kiếm sofa, giường ngủ, bàn ăn..."/>
+        <button class="search-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+      </div>
+      <div id="search-dropdown" class="search-dropdown"></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <a href="login.html" id="user-action-btn" class="header-action-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <span class="action-label">Tài khoản</span>
+      </a>
+      <a href="cart.html" class="header-action-btn" style="position:relative">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="action-label">Giỏ hàng</span>
+        <span class="cart-badge" style="display:none">0</span>
+      </a>
+      <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <div class="nav-item">
+        <a href="index.html" class="nav-link active">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Trang Chủ
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="products.html" class="nav-link">
+          🪑 Tất Cả Sản Phẩm
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="products.html?room=phong-khach"    class="nav-dropdown-link">🛋️ Phòng Khách</a>
+          <a href="products.html?room=phong-ngu"      class="nav-dropdown-link">🛏️ Phòng Ngủ</a>
+          <a href="products.html?room=phong-bep"      class="nav-dropdown-link">🍳 Phòng Bếp</a>
+          <a href="products.html?room=nha-ve-sinh"    class="nav-dropdown-link">🚿 Nhà Vệ Sinh</a>
+          <a href="products.html?room=phong-lam-viec" class="nav-dropdown-link">🖥️ Phòng Làm Việc</a>
+          <a href="products.html?room=ban-cong"       class="nav-dropdown-link">🌿 Ban Công</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="products.html?style=co-dien"     class="nav-link">🏛 Cổ Điển</a>
+      </div>
+      <div class="nav-item">
+        <a href="products.html?style=hien-dai"    class="nav-link">✨ Hiện Đại</a>
+      </div>
+      <div class="nav-item">
+        <a href="products.html?style=dong-duong"  class="nav-link">🌾 Đông Dương</a>
+      </div>
+      <div class="nav-item">
+        <a href="products.html?style=tan-co-dien" class="nav-link">💎 Tân Cổ Điển</a>
+      </div>
+      <div class="nav-item">
+        <a href="cart.html" class="nav-link">🛒 Giỏ Hàng</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ===== MOBILE MENU ===== -->
+<div id="mobile-menu" class="mobile-menu">
+  <div class="mobile-overlay"></div>
+  <div class="mobile-panel">
+    <div class="mobile-menu-header">
+      <span class="logo-brand" style="color:white;font-size:18px">IndigoSpace</span>
+      <button id="mobile-close" class="mobile-close">✕</button>
+    </div>
+    <div class="mobile-nav-item"><a href="index.html">🏠 Trang Chủ</a></div>
+    <div class="mobile-nav-item"><a href="products.html">🪑 Tất Cả Sản Phẩm</a></div>
+    <div class="mobile-nav-item"><a href="products.html?room=phong-khach">🛋️ Phòng Khách</a></div>
+    <div class="mobile-nav-item"><a href="products.html?room=phong-ngu">🛏️ Phòng Ngủ</a></div>
+    <div class="mobile-nav-item"><a href="products.html?room=phong-bep">🍳 Phòng Bếp</a></div>
+    <div class="mobile-nav-item"><a href="products.html?room=nha-ve-sinh">🚿 Nhà Vệ Sinh</a></div>
+    <div class="mobile-nav-item"><a href="products.html?room=phong-lam-viec">🖥️ Phòng Làm Việc</a></div>
+    <div class="mobile-nav-item"><a href="products.html?room=ban-cong">🌿 Ban Công</a></div>
+    <div class="mobile-nav-item"><a href="cart.html">🛒 Giỏ Hàng</a></div>
+    <div class="mobile-nav-item"><a href="login.html">👤 Đăng Nhập</a></div>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-slides">
+    <!-- Slide 1 - Phòng Khách Hiện Đại -->
+    <div class="hero-slide active">
+<div class="hero-slide-bg hero-bg-1">
+  <img
+    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1920&q=80"
+    alt="Phòng khách hiện đại"
+    style="width:100%;height:100%;object-fit:cover;"/>
+</div>
+      <div class="hero-slide-overlay"></div>
+      <div class="container hero-content" style="max-width:var(--max-w)">
+        <div class="hero-eyebrow">✨ Bộ Sưu Tập Mới 2026</div>
+        <h1 class="hero-title">Không Gian Sống<br><span>Sang Trọng & Tinh Tế</span></h1>
+        <p class="hero-desc">Khám phá hàng trăm mẫu nội thất cao cấp từ cổ điển đến hiện đại, tân cổ điển và đông dương. Thiết kế riêng theo yêu cầu.</p>
+        <div class="hero-actions">
+          <a href="products.html" class="btn btn-primary btn-lg">Khám Phá Ngay</a>
+          <a href="products.html?style=tan-co-dien" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.5);color:white;">Tân Cổ Điển</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 - Phòng Ngủ Cổ Điển -->
+    <div class="hero-slide">
+<div class="hero-slide-bg hero-bg-2">
+  <img
+    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1920&q=80"
+    alt="Phòng ngủ cao cấp"
+    style="width:100%;height:100%;object-fit:cover;"/>
+</div>
+      <div class="hero-slide-overlay"></div>
+      <div class="container hero-content" style="max-width:var(--max-w)">
+        <div class="hero-eyebrow">🛏️ Phòng Ngủ Hoàng Gia</div>
+        <h1 class="hero-title">Giấc Ngủ<br><span>Đẳng Cấp 5 Sao</span></h1>
+        <p class="hero-desc">Bộ sưu tập giường ngủ gỗ óc chó và gỗ sồi nhập khẩu, kết hợp với phong cách tân cổ điển thanh lịch. Cảm nhận sự khác biệt.</p>
+        <div class="hero-actions">
+          <a href="products.html?room=phong-ngu" class="btn btn-primary btn-lg">Xem Phòng Ngủ</a>
+          <a href="products.html?style=co-dien" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.5);color:white;">Cổ Điển</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 - Phong Cách Đông Dương -->
+    <div class="hero-slide">
+<div class="hero-slide-bg hero-bg-3">
+  <img
+    src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1920&q=80"
+    alt="Nội thất Đông Dương"
+    style="width:100%;height:100%;object-fit:cover;"/>
+</div>
+      <div class="hero-slide-overlay"></div>
+      <div class="container hero-content" style="max-width:var(--max-w)">
+        <div class="hero-eyebrow">🌿 Phong Cách Đông Dương</div>
+        <h1 class="hero-title">Hơi Thở<br><span>Thiên Nhiên Việt</span></h1>
+        <p class="hero-desc">Mây tre đan thủ công, gỗ tràm tự nhiên và hoa văn Á Đông. Nội thất Đông Dương mang văn hoá dân tộc vào ngôi nhà hiện đại.</p>
+        <div class="hero-actions">
+          <a href="products.html?style=dong-duong" class="btn btn-primary btn-lg">Phong Cách Đông Dương</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arrows -->
+  <button id="hero-prev" class="hero-arrow hero-arrow-prev">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button id="hero-next" class="hero-arrow hero-arrow-next">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+
+  <!-- Dots -->
+  <div class="hero-nav">
+    <div class="hero-dot active"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+  </div>
+</section>
+
+<!-- ===== ROOM CATEGORIES ===== -->
+<section class="room-categories">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head-eyebrow">Danh Mục</div>
+      <h2 class="section-head-title">Nội Thất Theo Từng Phòng</h2>
+      <p class="section-head-sub">Từ phòng khách đến ban công, mỗi góc nhà đều có bộ sưu tập riêng</p>
+      <div class="section-head-line"><span></span><em></em><span></span></div>
+    </div>
+    <div id="room-categories-grid" class="rooms-grid"></div>
+  </div>
+</section>
+
+<!-- ===== FEATURED PRODUCTS ===== -->
+<section class="featured-products section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head-eyebrow">Nổi Bật</div>
+      <h2 class="section-head-title">Sản Phẩm Bán Chạy</h2>
+      <p class="section-head-sub">Những mẫu nội thất được yêu thích nhất, kết hợp giữa thẩm mỹ và công năng sử dụng</p>
+      <div class="section-head-line"><span></span><em></em><span></span></div>
+    </div>
+    <div id="featured-products-grid" class="products-row"></div>
+    <div style="text-align:center;margin-top:var(--sp-2xl)">
+      <a href="products.html" class="btn btn-secondary btn-lg">Xem Tất Cả Sản Phẩm →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STYLE SHOWCASE ===== -->
+<section class="style-showcase section section--gray">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head-eyebrow">Phong Cách</div>
+      <h2 class="section-head-title">4 Phong Cách Thiết Kế</h2>
+      <p class="section-head-sub">Mỗi phong cách mang một linh hồn riêng — chọn lựa không gian phù hợp với cá tính của bạn</p>
+      <div class="section-head-line"><span></span><em></em><span></span></div>
+    </div>
+    <div class="styles-grid">
+      <!-- Cổ Điển -->
+      <a href="products.html?style=co-dien" class="style-card" data-style="co-dien">
+        <div class="style-bg style-bg-classic"></div>
+        <div class="style-overlay"></div>
+        <div class="style-content">
+          <div class="style-label">Classical</div>
+          <h3 class="style-title">Cổ Điển</h3>
+          <p class="style-desc">Gỗ óc chó chạm khắc tinh xảo, đường cong mềm mại, ánh vàng ấm áp — phong cách vượt thời gian</p>
+          <span class="style-link">Khám phá → </span>
+        </div>
+      </a>
+      <!-- Hiện Đại -->
+      <a href="products.html?style=hien-dai" class="style-card" data-style="hien-dai">
+        <div class="style-bg style-bg-modern"></div>
+        <div class="style-overlay"></div>
+        <div class="style-content">
+          <div class="style-label">Modern</div>
+          <h3 class="style-title">Hiện Đại</h3>
+          <p class="style-desc">Đường thẳng sắc nét, tối giản tinh tế, vật liệu kim loại và kính cao cấp</p>
+          <span class="style-link">Khám phá →</span>
+        </div>
+      </a>
+      <!-- Đông Dương -->
+      <a href="products.html?style=dong-duong" class="style-card" data-style="dong-duong">
+        <div class="style-bg style-bg-indochine"></div>
+        <div class="style-overlay"></div>
+        <div class="style-content">
+          <div class="style-label">Indochine</div>
+          <h3 class="style-title">Đông Dương</h3>
+          <p class="style-desc">Mây tre đan thủ công, hoa văn Á Đông, gần gũi thiên nhiên và văn hoá Việt</p>
+          <span class="style-link">Khám phá →</span>
+        </div>
+      </a>
+      <!-- Tân Cổ Điển -->
+      <a href="products.html?style=tan-co-dien" class="style-card" data-style="tan-co-dien">
+        <div class="style-bg style-bg-neoclassic"></div>
+        <div class="style-overlay"></div>
+        <div class="style-content">
+          <div class="style-label">Neo-Classical</div>
+          <h3 class="style-title">Tân Cổ Điển</h3>
+          <p class="style-desc">Cổ điển & hiện đại hoà quyện — đường nét thanh lịch, màu trung tính sang trọng</p>
+          <span class="style-link">Khám phá →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES / USP ===== -->
+<section class="features-section">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c-blue-mid)" stroke-width="1.8">
+            <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h6>Giao Hàng Toàn Quốc</h6>
+          <p>Miễn phí vận chuyển đơn từ 5 triệu. Giao hàng nhanh 2-5 ngày làm việc.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c-teal)" stroke-width="1.8">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h6>Bảo Hành Dài Hạn</h6>
+          <p>Bảo hành 1-3 năm tùy sản phẩm. Đổi trả miễn phí trong 30 ngày.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c-blue-mid)" stroke-width="1.8">
+            <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h6>Đổi Trả Dễ Dàng</h6>
+          <p>Không hài lòng hoàn tiền 100% trong 30 ngày. Không hỏi lý do.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c-teal)" stroke-width="1.8">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8a16 16 0 006 6l.35-.35a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <h6>Tư Vấn 24/7</h6>
+          <p>Đội ngũ chuyên gia tư vấn nội thất hỗ trợ mọi lúc mọi nơi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <h2>Nhận Ưu Đãi Độc Quyền</h2>
+    <p>Đăng ký nhận bản tin để được cập nhật bộ sưu tập mới và ưu đãi đặc biệt dành riêng cho thành viên</p>
+    <form id="newsletter-form" class="newsletter-form">
+      <input class="newsletter-input" type="email" placeholder="Nhập email của bạn..." required/>
+      <button type="submit" class="btn btn-teal">Đăng Ký</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="index.html" class="site-logo">
+        <div class="logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="logo-text"><span class="logo-brand">IndigoSpace</span><span class="logo-tagline">Interior Design</span></div>
+      </a>
+      <p class="footer-desc">Nội thất cao cấp cho không gian sống hoàn hảo. Chúng tôi tin rằng mỗi ngôi nhà đều xứng đáng được thiết kế đẹp và thông minh.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" title="Facebook">📘</a>
+        <a href="#" class="social-link" title="Instagram">📷</a>
+        <a href="#" class="social-link" title="YouTube">▶️</a>
+        <a href="#" class="social-link" title="TikTok">🎵</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Sản Phẩm</h5>
+      <div class="footer-links">
+        <a href="products.html?room=phong-khach">🛋️ Phòng Khách</a>
+        <a href="products.html?room=phong-ngu">🛏️ Phòng Ngủ</a>
+        <a href="products.html?room=phong-bep">🍳 Phòng Bếp</a>
+        <a href="products.html?room=nha-ve-sinh">🚿 Nhà Vệ Sinh</a>
+        <a href="products.html?room=phong-lam-viec">🖥️ Phòng Làm Việc</a>
+        <a href="products.html?room=ban-cong">🌿 Ban Công</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Chính Sách</h5>
+      <div class="footer-links">
+        <a href="#">Chính sách vận chuyển</a>
+        <a href="#">Chính sách đổi trả</a>
+        <a href="#">Chính sách bảo hành</a>
+        <a href="#">Bảo mật thông tin</a>
+        <a href="#">Điều khoản sử dụng</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Liên Hệ</h5>
+      <div class="footer-contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        123 Nguyễn Huệ, Q.1, TP.HCM
+      </div>
+      <div class="footer-contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8a16 16 0 006 6l.35-.35a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        1800-6868 (Miễn phí)
+      </div>
+      <div class="footer-contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        hello@indigospace.vn
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 IndigoSpace. All rights reserved.</span>
+    <div class="footer-payment">
+      <span class="payment-icon">VISA</span>
+      <span class="payment-icon">MC</span>
+      <span class="payment-icon">MOMO</span>
+      <span class="payment-icon">ZP</span>
+      <span class="payment-icon">COD</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scroll-top-btn" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;background:var(--c-blue-mid);color:white;border:none;border-radius:var(--r-full);cursor:pointer;font-size:20px;box-shadow:var(--shadow-lg);opacity:0;transition:opacity 0.3s;z-index:200;">↑</button>
+
+<div id="toast-container"></div>
+
+<script src="js/images-svg.js"></script>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

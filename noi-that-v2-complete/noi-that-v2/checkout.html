@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Thanh Toán — IndigoSpace</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/header.css"/>
+  <link rel="stylesheet" href="css/cart.css"/>
+</head>
+<body>
+<div id="page-loader" class="page-loader"><div class="loader-ring"></div></div>
+<header class="site-header">
+  <div class="header-top">🔒 Thanh toán an toàn — Mã hóa SSL 256-bit</div>
+  <div class="header-main">
+    <a href="index.html" class="site-logo">
+      <div class="logo-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="logo-text"><span class="logo-brand">IndigoSpace</span><span class="logo-tagline">Interior Design</span></div>
+    </a>
+    <div style="flex:1;text-align:center;">
+      <div style="display:flex;align-items:center;justify-content:center;gap:var(--sp-lg);">
+        <div style="display:flex;align-items:center;gap:8px;font-size:var(--text-sm);">
+          <span style="width:28px;height:28px;background:var(--c-blue-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:var(--c-blue-dark)">1</span>
+          <span style="color:var(--c-blue-pale)">Giỏ hàng</span>
+        </div>
+        <div style="width:40px;height:2px;background:var(--c-blue-mid);border-radius:2px;"></div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:var(--text-sm);">
+          <span style="width:28px;height:28px;background:var(--c-blue-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:white">2</span>
+          <span style="color:white;font-weight:600">Thanh toán</span>
+        </div>
+        <div style="width:40px;height:2px;background:rgba(255,255,255,0.2);border-radius:2px;"></div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:var(--text-sm);">
+          <span style="width:28px;height:28px;background:rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:rgba(255,255,255,0.5)">3</span>
+          <span style="color:rgba(255,255,255,0.5)">Xác nhận</span>
+        </div>
+      </div>
+    </div>
+    <a href="cart.html" class="header-action-btn">← Giỏ hàng</a>
+  </div>
+</header>
+
+<main class="checkout-page">
+<div class="container">
+  <div class="breadcrumb">
+    <a href="index.html">Trang Chủ</a><span class="breadcrumb-sep">›</span>
+    <a href="cart.html">Giỏ Hàng</a><span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Thanh Toán</span>
+  </div>
+
+  <div class="checkout-layout">
+    <!-- LEFT: Form -->
+    <div class="checkout-form-panel">
+      <!-- Thông tin giao hàng -->
+      <div class="checkout-section-title">
+        <span class="checkout-step-num">1</span> Thông Tin Giao Hàng
+      </div>
+      <div class="checkout-grid-2">
+        <div class="form-group">
+          <label class="form-label">Họ và Tên *</label>
+          <input class="form-control" type="text" placeholder="Nguyễn Văn A" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Số Điện Thoại *</label>
+          <input class="form-control" type="tel" placeholder="0901 234 567" required/>
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label class="form-label">Email</label>
+          <input class="form-control" type="email" placeholder="email@example.com"/>
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label class="form-label">Địa Chỉ Giao Hàng *</label>
+          <input class="form-control" type="text" placeholder="Số nhà, tên đường, phường/xã..." required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tỉnh / Thành Phố *</label>
+          <select class="form-control form-select">
+            <option value="">-- Chọn tỉnh/thành --</option>
+            <option>TP. Hồ Chí Minh</option><option>Hà Nội</option>
+            <option>Đà Nẵng</option><option>Cần Thơ</option>
+            <option>Hải Phòng</option><option>Bình Dương</option>
+            <option>Đồng Nai</option><option>Khác</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Quận / Huyện *</label>
+          <input class="form-control" type="text" placeholder="Quận 1, Quận Bình Thạnh..."/>
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label class="form-label">Ghi Chú Đơn Hàng</label>
+          <textarea class="form-control" rows="3" placeholder="Ghi chú thêm: thời gian giao hàng, hướng dẫn lắp đặt..."></textarea>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Phương thức thanh toán -->
+      <div class="checkout-section-title">
+        <span class="checkout-step-num">2</span> Phương Thức Thanh Toán
+      </div>
+      <div class="payment-method-cards">
+        <div class="payment-card selected" data-method="cod" onclick="selectPayment(this)">
+          <div class="payment-card-radio"></div>
+          <div>
+            <div class="payment-card-label">💵 Tiền Mặt (COD)</div>
+            <div class="payment-card-sub">Thanh toán khi nhận hàng</div>
+          </div>
+        </div>
+        <div class="payment-card" data-method="transfer" onclick="selectPayment(this)">
+          <div class="payment-card-radio"></div>
+          <div>
+            <div class="payment-card-label">🏦 Chuyển Khoản</div>
+            <div class="payment-card-sub">Ngân hàng / Internet Banking</div>
+          </div>
+        </div>
+        <div class="payment-card" data-method="momo" onclick="selectPayment(this)">
+          <div class="payment-card-radio"></div>
+          <div>
+            <div class="payment-card-label">📱 MoMo</div>
+            <div class="payment-card-sub">Ví điện tử MoMo</div>
+          </div>
+        </div>
+        <div class="payment-card" data-method="zalopay" onclick="selectPayment(this)">
+          <div class="payment-card-radio"></div>
+          <div>
+            <div class="payment-card-label">⚡ ZaloPay</div>
+            <div class="payment-card-sub">Ví điện tử ZaloPay</div>
+          </div>
+        </div>
+        <div class="payment-card" data-method="visa" onclick="selectPayment(this)">
+          <div class="payment-card-radio"></div>
+          <div>
+            <div class="payment-card-label">💳 Thẻ Visa/Master</div>
+            <div class="payment-card-sub">Thanh toán an toàn qua cổng</div>
+          </div>
+        </div>
+        <div class="payment-card" data-method="installment" onclick="selectPayment(this)">
+          <div class="payment-card-radio"></div>
+          <div>
+            <div class="payment-card-label">📊 Trả Góp 0%</div>
+            <div class="payment-card-sub">6–24 tháng qua thẻ tín dụng</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thông tin chuyển khoản (ẩn/hiện theo lựa chọn) -->
+      <div id="transfer-info" style="display:none;background:var(--c-frost);border-radius:var(--r-md);padding:var(--sp-md);border:1px solid var(--c-border-light);margin-bottom:var(--sp-lg);">
+        <div style="font-size:var(--text-sm);font-weight:700;color:var(--c-navy);margin-bottom:var(--sp-sm)">📋 Thông Tin Chuyển Khoản</div>
+        <div style="font-size:var(--text-sm);line-height:2;color:var(--c-text-mid);">
+          Ngân hàng: <strong>Vietcombank</strong><br/>
+          Số tài khoản: <strong>1234 5678 9012</strong><br/>
+          Chủ tài khoản: <strong>CÔNG TY TNHH INDIGOSPACE</strong><br/>
+          Nội dung: <strong>[Số điện thoại] + TEN SAN PHAM</strong>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Xác nhận -->
+      <div class="checkout-section-title">
+        <span class="checkout-step-num">3</span> Xác Nhận Đơn Hàng
+      </div>
+      <label class="checkbox-label" style="margin-bottom:var(--sp-md)">
+        <input type="checkbox" id="agree-terms" style="width:18px;height:18px;accent-color:var(--c-blue-mid)"/>
+        Tôi đồng ý với <a href="#" style="color:var(--c-blue-mid)">điều khoản sử dụng</a> và <a href="#" style="color:var(--c-blue-mid)">chính sách đổi trả</a>
+      </label>
+
+      <button class="btn btn-primary btn-full btn-lg" onclick="placeOrder()" style="font-size:var(--text-lg);padding:16px;">
+        🛒 Đặt Hàng Ngay
+      </button>
+      <p style="text-align:center;font-size:var(--text-xs);color:var(--c-text-muted);margin-top:var(--sp-sm)">
+        🔒 Thông tin của bạn được mã hóa SSL an toàn
+      </p>
+    </div>
+
+    <!-- RIGHT: Order Summary -->
+    <div class="checkout-order-summary">
+      <div class="summary-header">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Đơn Hàng Của Bạn
+        </h3>
+      </div>
+
+      <!-- Danh sách sản phẩm -->
+      <div id="checkout-items-list" style="max-height:360px;overflow-y:auto;"></div>
+
+      <!-- Tổng kết -->
+      <div class="summary-body" style="padding:var(--sp-md) var(--sp-lg);">
+        <div class="summary-row">
+          <span class="summary-label">Tổng tiền hàng</span>
+          <span id="co-subtotal" class="summary-value">0đ</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Phí vận chuyển</span>
+          <span id="co-shipping" class="summary-value">150.000đ</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Thuế VAT (10%)</span>
+          <span id="co-tax" class="summary-value tax">0đ</span>
+        </div>
+        <div class="summary-total">
+          <span class="summary-total-label">TỔNG CỘNG</span>
+          <span id="co-total" class="summary-total-value">0đ</span>
+        </div>
+      </div>
+
+      <div style="padding:var(--sp-md) var(--sp-lg);border-top:1px solid var(--c-border-light);">
+        <div style="display:flex;align-items:center;gap:8px;font-size:var(--text-xs);color:var(--c-success);font-weight:600;margin-bottom:8px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+          Đơn hàng được bảo vệ bởi chính sách mua hàng IndigoSpace
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:var(--text-xs);color:var(--c-text-muted);">
+          🚚 Dự kiến giao hàng: 2–5 ngày làm việc
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- SUCCESS MODAL -->
+<div id="order-success-modal" class="modal-overlay">
+  <div class="modal" style="text-align:center;max-width:460px;">
+    <div style="font-size:72px;margin-bottom:var(--sp-lg);">🎉</div>
+    <h2 style="color:var(--c-navy);margin-bottom:var(--sp-sm)">Đặt Hàng Thành Công!</h2>
+    <p style="color:var(--c-text-muted);margin-bottom:var(--sp-lg)">Cảm ơn bạn đã mua sắm tại IndigoSpace! Đơn hàng của bạn đang được xử lý. Chúng tôi sẽ liên hệ sớm nhất.</p>
+    <div style="background:var(--c-frost);border-radius:var(--r-md);padding:var(--sp-md);margin-bottom:var(--sp-xl);border:1px solid var(--c-border-light);">
+      <div style="font-size:var(--text-sm);color:var(--c-text-muted);margin-bottom:4px;">Mã đơn hàng của bạn</div>
+      <div id="order-code" style="font-size:var(--text-xl);font-weight:900;color:var(--c-navy);font-family:monospace;letter-spacing:2px;">#DH000</div>
+    </div>
+    <a href="index.html" class="btn btn-primary btn-full btn-lg">🏠 Về Trang Chủ</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-bottom" style="max-width:var(--max-w);margin:0 auto;padding:var(--sp-lg) var(--sp-xl);">
+    <span class="footer-copy">© 2026 IndigoSpace. All rights reserved.</span>
+    <div class="footer-payment"><span class="payment-icon">VISA</span><span class="payment-icon">MOMO</span><span class="payment-icon">ZP</span><span class="payment-icon">COD</span></div>
+  </div>
+</footer>
+<div id="toast-container"></div>
+<script src="js/images-svg.js"></script>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script>
+function selectPayment(card) {
+  document.querySelectorAll('.payment-card').forEach(c => c.classList.remove('selected'));
+  card.classList.add('selected');
+  const method = card.dataset.method;
+  document.getElementById('transfer-info').style.display = method === 'transfer' ? 'block' : 'none';
+}
+
+function placeOrder() {
+  const agreed = document.getElementById('agree-terms').checked;
+  if (!agreed) { showToast('Vui lòng đồng ý với điều khoản sử dụng', 'error'); return; }
+  const cart = CartManager.getCart();
+  if (cart.length === 0) { showToast('Giỏ hàng trống!', 'error'); return; }
+
+  const btn = event.target;
+  btn.disabled = true; btn.textContent = '⏳ Đang xử lý...';
+
+  setTimeout(() => {
+    const code = '#DH' + String(Date.now()).slice(-6);
+    document.getElementById('order-code').textContent = code;
+    document.getElementById('order-success-modal').classList.add('active');
+    CartManager.clearCart();
+  }, 1200);
+}
+</script>
+</body>
+</html>

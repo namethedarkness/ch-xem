@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Đăng Nhập — IndigoSpace</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/cart.css"/>
+</head>
+<body>
+<div id="page-loader" class="page-loader"><div class="loader-ring"></div></div>
+
+<div class="auth-page">
+  <!-- Decoration circles -->
+  <div class="auth-bg-circles">
+    <div class="auth-circle auth-circle-1"></div>
+    <div class="auth-circle auth-circle-2"></div>
+    <div class="auth-circle auth-circle-3"></div>
+  </div>
+
+  <div class="auth-card">
+    <!-- Logo -->
+    <a href="index.html" class="auth-logo">
+      <div style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <div class="logo-icon" style="width:42px;height:42px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-brand" style="color:var(--c-navy)">IndigoSpace</span>
+          <span class="logo-tagline" style="color:var(--c-text-muted)">Interior Design</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Tabs -->
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-target="login-form">Đăng Nhập</button>
+      <button class="auth-tab" data-target="register-form">Đăng Ký</button>
+    </div>
+
+    <!-- ===== LOGIN FORM ===== -->
+    <form id="login-form" class="auth-form active">
+      <div class="auth-header">
+        <h2 class="auth-title">Chào Mừng Trở Lại 👋</h2>
+        <p class="auth-subtitle">Đăng nhập để tiếp tục mua sắm và quản lý đơn hàng</p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <div class="input-icon-wrap">
+          <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <input id="login-email" class="form-control" type="email" placeholder="email@example.com" value="admin@noithat.vn"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Mật Khẩu</label>
+        <div class="password-wrap">
+          <input id="login-password" class="form-control" type="password" placeholder="Nhập mật khẩu..." value="admin123"/>
+          <button type="button" class="password-toggle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="auth-extras">
+        <label class="checkbox-label">
+          <input type="checkbox" checked style="width:16px;height:16px;accent-color:var(--c-blue-mid)"/>
+          Ghi nhớ đăng nhập
+        </label>
+        <a href="#" class="forgot-link">Quên mật khẩu?</a>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full btn-lg">
+        Đăng Nhập
+      </button>
+
+      <div class="auth-divider">hoặc đăng nhập với</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-sm);">
+        <button type="button" class="btn btn-secondary" style="font-size:var(--text-sm);padding:10px;" onclick="showToast('Tính năng sắp ra mắt!','info')">
+          🇬 Google
+        </button>
+        <button type="button" class="btn btn-secondary" style="font-size:var(--text-sm);padding:10px;" onclick="showToast('Tính năng sắp ra mắt!','info')">
+          📘 Facebook
+        </button>
+      </div>
+
+      <div style="background:var(--c-ice);border-radius:var(--r-md);padding:10px 14px;margin-top:var(--sp-md);font-size:var(--text-xs);color:var(--c-blue-dark);border:1px solid var(--c-blue-pale);">
+        <strong>💡 Demo:</strong> Email: <code>admin@noithat.vn</code> · Pass: <code>admin123</code>
+      </div>
+    </form>
+
+    <!-- ===== REGISTER FORM ===== -->
+    <form id="register-form" class="auth-form" style="display:none;">
+      <div class="auth-header">
+        <h2 class="auth-title">Tạo Tài Khoản Mới ✨</h2>
+        <p class="auth-subtitle">Đăng ký để nhận ưu đãi độc quyền và theo dõi đơn hàng</p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Họ và Tên *</label>
+        <div class="input-icon-wrap">
+          <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <input id="reg-name" class="form-control" type="text" placeholder="Nguyễn Văn A" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Email *</label>
+        <div class="input-icon-wrap">
+          <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <input id="reg-email" class="form-control" type="email" placeholder="email@example.com" required/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Số Điện Thoại</label>
+        <div class="input-icon-wrap">
+          <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8a16 16 0 006 6l.35-.35a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <input id="reg-phone" class="form-control" type="tel" placeholder="0901 234 567"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Mật Khẩu *</label>
+        <div class="password-wrap">
+          <input id="reg-password" class="form-control" type="password" placeholder="Ít nhất 6 ký tự" required/>
+          <button type="button" class="password-toggle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Xác Nhận Mật Khẩu *</label>
+        <div class="password-wrap">
+          <input id="reg-confirm" class="form-control" type="password" placeholder="Nhập lại mật khẩu" required/>
+          <button type="button" class="password-toggle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <label class="checkbox-label" style="margin-bottom:var(--sp-lg);align-items:flex-start;gap:10px;">
+        <input type="checkbox" id="agree-terms-reg" required style="width:16px;height:16px;margin-top:2px;accent-color:var(--c-blue-mid);flex-shrink:0;"/>
+        <span style="font-size:var(--text-sm);color:var(--c-text-mid);">
+          Tôi đồng ý với <a href="#" style="color:var(--c-blue-mid)">Điều Khoản Dịch Vụ</a> và
+          <a href="#" style="color:var(--c-blue-mid)">Chính Sách Bảo Mật</a> của IndigoSpace
+        </span>
+      </label>
+
+      <button type="submit" class="btn btn-primary btn-full btn-lg">
+        Đăng Ký Ngay 🎉
+      </button>
+    </form>
+
+    <div class="auth-switch">
+      <span id="switch-text">Chưa có tài khoản? <a href="#" id="switch-link" onclick="switchTab(event)">Đăng ký ngay</a></span>
+    </div>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+<script src="js/images-svg.js"></script>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/detail-auth-admin.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Đổi tab Login <-> Register
+function switchTab(e) {
+  e.preventDefault();
+  const loginTab = document.querySelector('.auth-tab[data-target="login-form"]');
+  const regTab   = document.querySelector('.auth-tab[data-target="register-form"]');
+  const isLogin  = loginTab.classList.contains('active');
+  if (isLogin) {
+    loginTab.classList.remove('active'); regTab.classList.add('active');
+    document.getElementById('login-form').style.display = 'none';
+    document.getElementById('register-form').style.display = 'block';
+    document.getElementById('switch-text').innerHTML = 'Đã có tài khoản? <a href="#" onclick="switchTab(event)">Đăng nhập</a>';
+  } else {
+    regTab.classList.remove('active'); loginTab.classList.add('active');
+    document.getElementById('register-form').style.display = 'none';
+    document.getElementById('login-form').style.display = 'block';
+    document.getElementById('switch-text').innerHTML = 'Chưa có tài khoản? <a href="#" onclick="switchTab(event)">Đăng ký ngay</a>';
+  }
+}
+// Tab click
+document.querySelectorAll('.auth-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const t = tab.dataset.target;
+    document.getElementById('login-form').style.display    = t === 'login-form'    ? 'block' : 'none';
+    document.getElementById('register-form').style.display = t === 'register-form' ? 'block' : 'none';
+    document.getElementById('switch-text').innerHTML = t === 'login-form'
+      ? 'Chưa có tài khoản? <a href="#" onclick="switchTab(event)">Đăng ký ngay</a>'
+      : 'Đã có tài khoản? <a href="#" onclick="switchTab(event)">Đăng nhập</a>';
+  });
+});
+</script>
+</body>
+</html>
